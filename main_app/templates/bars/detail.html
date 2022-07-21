@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Bar Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ bar.name }}</span>
+    <p>Description: {{ bar.description }}</p>
+    <p>Price: {{ bar.price }}</p>
+  </div>
+  <div clas="card-action">
+    <a href="{% url 'bars_update' bar.id %}">Edit</a>
+    <a href="{% url 'bars_delete' bar.id %}">Delete</a>
+  </div>
+</div>
+
+{% endblock %}

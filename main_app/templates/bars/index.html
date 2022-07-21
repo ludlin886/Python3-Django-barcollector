@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Cocktails List</h1>
+
+{% for bar in bars %}
+<div class="card">
+    <a href="{% url 'detail' bar.id %}">
+    <div class="card-content">
+      <span class="card-title">{{ bar.name }}</span>
+    </div>
+  </div>
+</a>
+{% endfor %} {% endblock %}
