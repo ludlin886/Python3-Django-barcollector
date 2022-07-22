@@ -15,6 +15,7 @@
       type="text/css"
       href="{% static 'css/style.css' %}"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
   <body>
     <header class="navbar-fixed">
@@ -28,9 +29,9 @@
           <ul class="right">
             <li><a href="{% url 'about' %}">About</a></li>
             <li>
-              <a href="{% url 'bars_create' %}">Add your favourite Cocktail</a>
+              <a href="{% url 'bars_create' %}">Add your favourite Bar</a>
             </li>
-            <li><a href="{% url 'index' %}">View All Cocktails</a></li>
+            <li><a href="{% url 'index' %}">View All Bars</a></li>
           </ul>
         </div>
       </nav>
@@ -38,7 +39,7 @@
     <main class="container">{% block content %} {% endblock %}</main>
     <footer class="page-footer">
       <div class="right">
-        All Rights Reserved, &copy; 2019 Cat Collector &nbsp;
+        All Rights Reserved, &copy; 2022 Bar Collector &nbsp;
       </div>
     </footer>
   </body>

@@ -9,4 +9,5 @@ urlpatterns = [
     path('bars/create/', views.BarCreate.as_view(), name='bars_create'),
     path('bars/<int:pk>/update', views.BarUpdate.as_view(), name='bars_update'),
     path('bars/<int:pk>/delete', views.BarDelete.as_view(), name='bars_delete'),
+    path('bars/<int:bar_id>/add_rating/', views.add_rating, name='add_rating'),
 ]
