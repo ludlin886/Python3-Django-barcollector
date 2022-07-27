@@ -3,11 +3,21 @@ from django.urls import reverse
 from datetime import date
 
 RATING = (
-    ('A', 'Awesome'),
-    ('B', 'Good'),
-    ('C', 'Soso'),
-    ('D', 'Bad'),
+    ('A', '⭐️⭐️⭐️⭐️⭐️'),
+    ('B', '⭐️⭐️⭐️⭐️'),
+    ('C', '⭐️⭐️⭐️'),
+    ('D', '⭐️⭐️'),
+    ('E', '⭐️'),
 )
+
+class Available(models.Model):
+    name = models.CharField(max_length=50) 
+
+    def __str__(self):
+        return self.name
+    
+    def get_absolute_url(self):
+        return reverse('available_detail', kwargs={'pk': self.id})
 
 class Bar(models.Model):
     name = models.CharField(max_length=100)
@@ -15,6 +25,7 @@ class Bar(models.Model):
     address = models.CharField(max_length=100)
     menu = models.CharField(max_length=100)
     phone = models.CharField(max_length=100)
+    available = models.ManyToManyField(Available)
 
 
     def __str__(self):

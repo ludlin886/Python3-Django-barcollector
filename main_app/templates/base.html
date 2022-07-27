@@ -23,11 +23,14 @@
         <div class="nav-wrapper">
           <ul>
             <li>
-              <a href="/" class="left brand-logo">&nbsp;&nbsp;BarCollector</a>
+              <a href="/home" class="left brand-logo"
+                >&nbsp;&nbsp;BarCollector</a
+              >
             </li>
           </ul>
           <ul class="right">
             <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'avaliable_create' %}">Bar Avaliable</a></li>
             <li>
               <a href="{% url 'bars_create' %}">Add your favourite Bar</a>
             </li>
